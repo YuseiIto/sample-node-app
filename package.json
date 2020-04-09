@@ -1,0 +1,8 @@
+{
+  "name": "sample-node-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:YuseiIto/sample-node-app.git",
+  "author": "Yusei Ito <yuseikun@Outlook.jp>",
+  "license": "MIT"
+}

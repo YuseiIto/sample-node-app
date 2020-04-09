@@ -1,0 +1,19 @@
+# ./docker-compose.yml
+version: "3"
+services:
+  app:
+    image: node:11.8.0
+    ports:
+      - $PORT:$PORT
+    volumes:
+      - ./:/src
+    working_dir: /src
+    environment:
+      VIRTUAL_HOST: myapp.mydomain.com
+      LETSENCRYPT_HOST: myapp.mydomain.com
+      LETSENCRYPT_EMAIL: your.real@email.com
+    restart: always
+networks:
+  default:
+    external:
+      name: nginx-proxy
