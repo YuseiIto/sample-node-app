@@ -9,9 +9,9 @@ services:
       - ./:/src
     working_dir: /src
     environment:
-      VIRTUAL_HOST: myapp.mydomain.com
-      LETSENCRYPT_HOST: myapp.mydomain.com
-      LETSENCRYPT_EMAIL: your.real@email.com
+      VIRTUAL_HOST: sample.yuseiito.com
+      LETSENCRYPT_HOST: sample.yuseiito.com
+      LETSENCRYPT_EMAIL: yuseikun@outlook.jp
     restart: always
 networks:
   default:
