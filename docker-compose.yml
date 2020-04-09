@@ -13,6 +13,7 @@ services:
       - VIRTUAL_HOST=sample.yuseiito.com
       - LETSENCRYPT_HOST=sample.yuseiito.com
       - LETSENCRYPT_EMAIL=yuseikun@outlook.jp
+      - HTTPS_METHOD=noredirect
     restart: always
     command: [sh, -c, npm install && npm start]
 networks:
