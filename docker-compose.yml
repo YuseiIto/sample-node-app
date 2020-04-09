@@ -5,6 +5,8 @@ services:
     image: node:11.8.0
     ports:
       - 12345:3000
+    expose:
+      - 12345
     volumes:
       - ./:/src
     working_dir: /src
