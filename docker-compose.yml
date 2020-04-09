@@ -14,6 +14,7 @@ services:
       - LETSENCRYPT_HOST=sample.yuseiito.com
       - LETSENCRYPT_EMAIL=yuseikun@outlook.jp
     restart: always
+    command: [sh, -c, npm install && npm start]
 networks:
   default:
     external:
