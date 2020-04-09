@@ -7,9 +7,10 @@ services:
       - ./:/src
     working_dir: /src
     environment:
-      VIRTUAL_HOST: sample.yuseiito.com
-      LETSENCRYPT_HOST: sample.yuseiito.com
-      LETSENCRYPT_EMAIL: yuseikun@outlook.jp
+      - VIRTUAL_PORT=8080
+      - VIRTUAL_HOST=sample.yuseiito.com
+      - LETSENCRYPT_HOST=sample.yuseiito.com
+      - LETSENCRYPT_EMAIL=yuseikun@outlook.jp
     restart: always
 networks:
   default:
