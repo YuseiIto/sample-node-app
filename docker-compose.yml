@@ -3,13 +3,10 @@ version: "3"
 services:
   app:
     image: node:11.8.0
-    ports:
-      - "12345:3000"
     volumes:
       - ./:/src
     working_dir: /src
     environment:
-      VIRTUAL_PORT: "12345"
       VIRTUAL_HOST: sample.yuseiito.com
       LETSENCRYPT_HOST: sample.yuseiito.com
       LETSENCRYPT_EMAIL: yuseikun@outlook.jp
