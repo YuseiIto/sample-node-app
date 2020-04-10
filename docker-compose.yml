@@ -2,21 +2,21 @@
 version: "2"
 services:
   app:
-    image: node:11.8.0
+    image: node:latest
     volumes:
       - ./:/src
     working_dir: /src
     ports:
       - "8080:8080"
     environment:
-      - VIRTUAL_PORT=8080
-      - VIRTUAL_HOST=sample.yuseiito.com
-      - LETSENCRYPT_HOST=sample.yuseiito.com
-      - LETSENCRYPT_EMAIL=yuseikun@outlook.jp
-      - HTTPS_METHOD=noredirect
+      VIRTUAL_HOST: sample.yuseiito.com
+      LETSENCRYPT_HOST: sample.yuseiito.com
+      LETSENCRYPT_EMAIL: yuseikun@outlook.jp
+      VIRTUAL_PORT: 8080
+      HTTPS_METHOD: noredirect
     restart: always
     command: [sh, -c, npm install && npm start]
 networks:
   default:
     external:
-      name: nginx-proxy
+      name: shared
